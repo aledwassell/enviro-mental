@@ -1,0 +1,6 @@
+<app-nav [links]="facts"></app-nav>
+<fact [fact]="fact" [header]="true" [style.backgroundImage]="'url('+ headerImageSrc +')'" fxLayoutAlign="center center"></fact>
+<div *ngFor="let fact of facts; let i = index">
+  <fact [fact]="fact" fxLayoutAlign="center center"></fact>
+  <image *ngIf="i < facts.length - 1" fxLayout [imgSrc]="fact.imgSrc"></image>
+</div>
