@@ -1,0 +1,3 @@
+<nav mat-tab-nav-bar fxHide.xs>
+	<a mat-tab-link *ngFor="let link of links" (click)="activeLink = link.link" [active]="activeLink === link.link">{{link.header}}</a>
+</nav>

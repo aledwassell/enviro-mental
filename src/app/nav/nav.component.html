@@ -1,7 +1,6 @@
 <div fxLayout="row" fxLayoutAlign="space-between center">
 	enviroMENTAL
-	<nav mat-tab-nav-bar fxHide.xs>
-		<a mat-tab-link *ngFor="let link of links" (click)="activeLink = link.link" [active]="activeLink === link.link">{{link.header}}</a></nav>
+  <app-nav-list [list]="links"></app-nav-list>
 	<button mat-icon-button (click)="drawer.toggle()" aria-label="navigation">
       <mat-icon *ngIf="!drawer.opened">menu</mat-icon>
       <mat-icon *ngIf="drawer.opened">close</mat-icon>
