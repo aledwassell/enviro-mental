@@ -17,6 +17,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppComponent} from './app.component';
 import {FactComponent} from './components/fact/fact.component';
 import {NavComponent} from'./nav/nav.component';
+import {ListComponent} from'./nav/list.component';
 import {ImageComponent} from './components/image/image.component';
 
 @NgModule({
@@ -35,7 +36,7 @@ import {ImageComponent} from './components/image/image.component';
     MatToolbarModule,
     ScrollingModule,
   ],
-  declarations: [ AppComponent, FactComponent, NavComponent, ImageComponent],
+  declarations: [ AppComponent, FactComponent, ListComponent, NavComponent, ImageComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
