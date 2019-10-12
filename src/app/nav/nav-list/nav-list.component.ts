@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./nav-list.component.css']
 })
 export class NavListComponent implements OnInit {
-  @Input() list: string[];
+  @Input() links: string[];
   constructor() { }
 
   ngOnInit() {

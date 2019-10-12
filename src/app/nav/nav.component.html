@@ -1,13 +1,13 @@
 <div fxLayout="row" fxLayoutAlign="space-between center">
 	enviroMENTAL
-  <app-nav-list [list]="links"></app-nav-list>
-	<button mat-icon-button (click)="drawer.toggle()" aria-label="navigation">
+  <app-nav-list [links]="links" fxHide fxShow.gt-xs></app-nav-list>
+	<button mat-icon-button fxHide fxShow.xs (click)="drawer.toggle()" aria-label="navigation">
       <mat-icon *ngIf="!drawer.opened">menu</mat-icon>
       <mat-icon *ngIf="drawer.opened">close</mat-icon>
     </button>
 </div>
-<mat-drawer-container class="example-container" autosize>
+<mat-drawer-container class="example-container" autosize fxHide fxShow.xs>
   <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
-    contained nav
+    <app-nav-list [links]="links"></app-nav-list>
   </mat-drawer>
 </mat-drawer-container>
